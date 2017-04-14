@@ -1,0 +1,38 @@
+Polymorphism merupakan suatu aksi yang memungkinkan pemogram menyampaikan suatu pesan tertentu keluar dari 
+hierarki obyeknya, dimana suatu obyek tersebut yang berbeda memberikan tanggapan ataupun respon terhadap 
+pesan yang sama sesuai dengan sifat masing-masing obyek. Itu berarti, Polymorphism mempunyai banyak bentuk 
+yang juga merupakan salah satu sifat class yang memungkinkan sebuah method mempunyai nama yang sama,
+namun memiliki aksi yang berbeda.
+
+//Buat Class Bentuk
+public class PolymorphismBentuk {
+ 
+   public static void main(String[] args) {  //method void main utama
+   Bola object = new Bola();
+   Kubus object2 = new Kubus();
+   object.tampilBentuk(); //memanggil method sama namun dengan hasil berbeda
+   object2.tampilBentuk(); //memanggil method sama namun dengan hasil berbeda
+      }
+}
+//Buat Class Bola
+class Bola extends PolymorphismBentuk {
+   
+    public void tampilJenis(){
+        //membuat method tampilBentuk() yang sama dengan class PolymorphismBentuk
+    System.out.println("Bentuk Bola : Bulat ");
+       //statement  dari perilaku yaitu menampilkan pesan text
+       // berbeda dari class bentuk
+   }
+}
+//Buat Class Kubus
+class Kubus extends PolymorphismBentuk
+{
+  public void tampilBentuk(){
+     //membuat method tampilBentuk() yang sama dengan class Bentuk
+    System.out.println("Bentuk Kubus : Kotak");
+     //statement  dari perilaku yaitu menampilkan pesan text
+       // berbeda dari class bentuk
+       
+   }
+   
+}
